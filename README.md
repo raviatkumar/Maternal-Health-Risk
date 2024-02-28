@@ -1,5 +1,8 @@
 # Maternal Health Risk
 
+![Alt text](https://raw.githubusercontent.com/raviatkumar/Maternal-Health-Risk/main/Image/Meternal.jpg)
+
+
 ## Problem Description
 
 Pregnancy is a pivotal phase in a woman's life, demanding meticulous monitoring of maternal health to ensure the well-being of both the expecting mother and the unborn child. Complications during pregnancy can pose serious risks, necessitating early detection and intervention. This notebook is dedicated to leveraging machine learning methods to forecast the risk levels of pregnant women by analyzing essential health attributes.
