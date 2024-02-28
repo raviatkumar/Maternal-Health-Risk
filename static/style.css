@@ -1,0 +1,28 @@
+/* Add your custom styles here */
+body {
+    background-image: url("/static/icon/aswin.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    margin-top: 20px;
+}
+
+#prediction-result {
+    margin-top: 20px;
+    color: #000;
+}

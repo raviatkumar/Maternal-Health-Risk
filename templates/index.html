@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maternal Health Risk Predictor</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: lightblue; /* Add your preferred background color */
+            color: #333; /* Dark gray text color for good contrast */
+        }
+
+        #prediction-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 5px; /* Add margin to the top of the form */
+        }
+
+        #prediction-form label {
+            margin-bottom: 5px;
+        }
+
+        #prediction-form input {
+            margin-bottom: 5px;
+        }
+
+        #prediction-form button {
+            margin-top: 5px;
+            margin-bottom: 10px; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Maternal Health Risk Predictor</h1>
+    <form id="prediction-form">
+        <label for="Age">Age:</label>
+        <input type="number" id="Age" name="Age" required><br>
+
+        <label for="SystolicBP">Systolic Blood Pressure:</label>
+        <input type="number" id="SystolicBP" name="SystolicBP" required><br>
+
+        <label for="DiastolicBP">Diastolic Blood Pressure:</label>
+        <input type="number" id="DiastolicBP" name="DiastolicBP" required><br>
+
+        <label for="BS">Blood Sugar:</label>
+        <input type="number" id="BS" name="BS" required><br>
+
+        <label for="BodyTemp">Body Temperature:</label>
+        <input type="number" id="BodyTemp" name="BodyTemp" required><br>
+
+        <label for="HeartRate">Heart Rate:</label>
+        <input type="number" id="HeartRate" name="HeartRate" required><br>
+
+        <button type="button" onclick="predict()">Predict</button>
+    </form>
+
+    <div id="prediction-result"></div>
+
+    <script>
+        function predict() {
+            // Get form data
+            var formData = {
+                'Age': document.getElementById('Age').value,
+                'SystolicBP': document.getElementById('SystolicBP').value,
+                'DiastolicBP': document.getElementById('DiastolicBP').value,
+                'BS': document.getElementById('BS').value,
+                'BodyTemp': document.getElementById('BodyTemp').value,
+                'HeartRate': document.getElementById('HeartRate').value
+            };
+
+            // Send POST request to Flask app
+            fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display prediction result
+                document.getElementById('prediction-result').innerText = 'Prediction: ' + data.prediction;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
