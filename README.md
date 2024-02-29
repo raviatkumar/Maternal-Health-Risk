@@ -2,6 +2,8 @@
 
 ![Alt text](https://raw.githubusercontent.com/raviatkumar/Maternal-Health-Risk/main/Image/Meternal.jpg)
 
+## Output
+![Alt text](https://raw.githubusercontent.com/raviatkumar/Maternal-Health-Risk/main/Output/maternal.PNG)
 
 ## Problem Description
 
