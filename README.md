@@ -5,6 +5,49 @@
 ## Output
 ![Alt text](https://raw.githubusercontent.com/raviatkumar/Maternal-Health-Risk/main/Output/maternal.PNG)
 
+### how run this app
+
+#### Installation
+
+To install the required packages for this project, use the following command after creating a virtual environment:
+
+```bash
+pip install -r requirements.txt
+```
+
+*Note: The model was trained on Google Colab with GPU support.*
+
+#### How to Run the App
+
+After installing the necessary packages, run the following command from the project root directory to start the app:
+
+```bash
+pip install Flask
+```
+
+```bash
+python app.py
+```
+
+Visit [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) from your browser to access Swagger. You can upload an image through the predict endpoint and receive a JSON response. Use the `--reload` argument to see immediate effects when changing code.
+
+#### How to Run the App with Docker
+
+Ensure you are in the project root directory and Docker is running. Use the following command to create a Docker image:
+
+```bash
+docker build -t image-classifier-api .
+```
+
+Once the image is built successfully, run the container with the following commands:
+
+```bash
+docker run -p 5000 image-classifier-api
+```
+
+Visit http://127.0.0.1:5000/docs from your browser to access Swagger. You can upload an image through the predict endpoint and receive a JSON response.
+
+
 ## Problem Description
 
 Pregnancy is a pivotal phase in a woman's life, demanding meticulous monitoring of maternal health to ensure the well-being of both the expecting mother and the unborn child. Complications during pregnancy can pose serious risks, necessitating early detection and intervention. This notebook is dedicated to leveraging machine learning methods to forecast the risk levels of pregnant women by analyzing essential health attributes.
