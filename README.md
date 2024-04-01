@@ -5,8 +5,6 @@
 ## Output
 ![Alt text](https://raw.githubusercontent.com/raviatkumar/Maternal-Health-Risk/main/Output/maternal.PNG)
 
-### how run this app
-
 #### Installation
 
 To install the required packages for this project, use the following command after creating a virtual environment:
